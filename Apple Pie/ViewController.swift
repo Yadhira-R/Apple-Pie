@@ -38,6 +38,7 @@ class ViewController: UIViewController {
     }
     var currentGame: Game!
     
+    
     func newRound() {
         if !listOfWords.isEmpty {
             let newWord = listOfWords.removeFirst()
@@ -48,6 +49,8 @@ class ViewController: UIViewController {
             enableLetterButtons(false)
         }
     }
+    
+    
     func enableLetterButtons(_ enable: Bool) {
         for button in letterButtons {
             button.isEnabled = enable
@@ -75,6 +78,7 @@ class ViewController: UIViewController {
         updateGameState()
         
     }
+    
     
     func updateGameState() {
         if currentGame.incorrectMovesRemaining == 0 {
